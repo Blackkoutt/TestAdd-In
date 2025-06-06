@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moja wtyczka Outlook</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+</head>
+<body>
+  <h3>Wstaw treść maila</h3>
+  <button id="btnInsert">Wstaw szablon</button>
+
+  <script>
+    Office.onReady(() => {
+      document.getElementById('btnInsert').onclick = () => {
+        const item = Office.context.mailbox.item;
+
+        item.subject.setAsync("Temat z wtyczki", () => {});
+        item.body.setAsync("<p>To jest automatycznie wstawiona treść maila.</p>", { coercionType: Office.CoercionType.Html }, () => {});
+        item.to.setAsync([{ emailAddress: "test@example.com" }], () => {});
+      };
+    });
+  </script>
+</body>
+</html>

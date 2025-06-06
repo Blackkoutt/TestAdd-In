@@ -9,7 +9,6 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Mój Outlook Add-in" />
   <Description DefaultValue="Dodatek do wstawiania maila" />
-  <IconUrl DefaultValue="https://twoja-domena.com/assets/icon-32.png" />
 
   <Hosts>
     <Host Name="Mailbox" />
@@ -24,7 +23,7 @@
   <FormSettings>
     <Form xsi:type="MessageCompose">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:5001/Order" />
+        <SourceLocation DefaultValue="https://blackkoutt.github.io/TestAdd-In/" />
         <RequestedHeight>300</RequestedHeight>
       </DesktopSettings>
     </Form>
